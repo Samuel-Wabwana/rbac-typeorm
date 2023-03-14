@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
 
-@Entity()
+@Entity({ schema: 'rbac_api', })
 export class User {
     @PrimaryGeneratedColumn("uuid")
     id: string
