@@ -21,4 +21,8 @@ export class UsersService {
         const { password, ...retrieveUserDto } = await this.userRepository.save(createUserDto);
         return retrieveUserDto;
     }
+
+    async findOne(login: string) {
+        return await this.userRepository.findOne({ where: { login }});
+    }
 }
